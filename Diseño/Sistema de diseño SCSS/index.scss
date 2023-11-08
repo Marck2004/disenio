@@ -1,0 +1,65 @@
+$colors: (
+    primary: #3d70b2,
+    secondary: #5596e6,
+    tertiary: #41d6c3,
+    dark: #152934,
+    error: #e71d32,
+    succes:#5aa700,
+    warning:#efc100,
+    info:#5aaafa
+);
+$letters: (
+    family: sans-serif,
+    size : 16px,
+    line-height: 1.5,
+    color-base: map-get($colors,'dark')
+);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    font-family: map-get($letters,'family');
+    
+    width: 100%;
+    height: 100px;
+    background-color: map-get($colors,'primary');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    font-family: map-get($letters,'family');
+    color: map-get($colors,'error');
+    background-color:map-get($colors,'tertiary');
+    font-size: map-get($letters,'size');
+
+    #lateral{
+        display: block;
+        float: right;
+        height: 500px;
+        width: 25%;
+        background-color: map-get($colors,'info');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #contenido{
+        float: left;
+        width: 75%;
+        background-color: map-get($colors,'succes');
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #footer{
+        height: 607px;
+        width: 100%;
+        background-color: map-get($colors,'warning');
+        margin: 0px auto;
+
+    }
+}
+
